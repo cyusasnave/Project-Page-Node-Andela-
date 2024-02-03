@@ -1,0 +1,27 @@
+<h1>All Users</h1>
+<br>
+<div class="user-container">
+  <% if (users.length > 0) { %>
+    <div class="user-inner-container">
+      <div><strong>Names</strong></div>
+      <div><strong>Email</strong></div>
+      <div><strong>Controllers</strong></div>
+    </div>
+    <br>
+    <% users.forEach(user => { %>
+      <hr>
+      <br>
+      <div class="user-inner-container">
+        <div><%= user.firstName %> <%= user.lastName %></div>
+        <div> <%= user.email %></div>
+        <div class="user-controller-btn">
+          <div><a class="edit-button cancel" href="/users/<%= user.id %>/edit">Edit</a></div>
+          <div><a class="edit-button cancel" href="/users/<%= user.id %>">View</a></div>
+        </div>
+      </div>
+      <br>
+    <% }); %>
+  <% } else { %>
+    <h3>No user Available!</h3>
+  <% } %>
+</div>

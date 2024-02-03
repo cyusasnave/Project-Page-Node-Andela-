@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: lightgoldenrodyellow;
+  color: black;
+  scroll-behavior: smooth;
+  padding-top: 80px;
+}
+.whole-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(169, 150, 63, 0.8);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+}
+.whole-nav h1{
+  background-color: #fff;
+  width: 40%;
+  border-top-right-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.navigation-bar{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -25px;
+}
+.navigation-bar nav ul{
+  display: flex;
+  list-style: none;
+}
+.navigation-bar nav ul li{
+  padding: 23px 40px;
+  transition: 0.4s;
+}
+.navigation-bar nav ul li:hover{
+  background-color: rgba(255, 255, 255, 0.418);
+}
+.anchor{
+  color: black;
+  text-decoration: none;
+}
+.anchor:hover{
+  color: rgb(16, 34, 53);
+}
+.add-prject-btn{
+  margin-top: 18px;
+  height: 35px;
+  padding: 2.5px 15px;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border: 3px solid white;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.add-prject-btn:hover{
+  background: rgb(0, 0, 0);
+}
+.container{
+  width: 100%;
+  margin: auto;
+  margin-bottom: 3rem;
+  margin-top: 20px;
+}
+.inner-container{
+  margin: 2rem;
+}
+.added-projects-container{
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 50px;
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+.added-projects-container-1{
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap: 50px;
+  padding-bottom: 70px;
+}
+.show-more-project-anchor{
+  position: absolute;
+  bottom: 0px;
+  left: 40%;
+  padding: 3px 10px;
+  background-color: rgb(205, 156, 50);
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.show-more-project-anchor:hover{
+  background-color: rgb(221, 178, 86);
+}
+.project-container{
+  background: rgba(169, 150, 63, 0.8);
+  margin-top: 10px;
+  width: 280px;
+  height: 300px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-inner-container{
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 280px;
+  height: 300px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 20px;
+  transform: skew(7deg, -7deg);
+  transition: 0.5s;
+}
+.project-inner-container:hover{
+  transform: skew(0deg, 0deg);
+}
+.project-edit-delete-button-container{
+  display: flex;
+  gap: 20px;
+}
+.edit-button{
+  text-decoration: none;
+  padding: 2.5px 10px;
+  border: 2px solid rgba(142, 142, 253, 0.807);
+  background: rgba(142, 142, 253, 0.807);
+  color: white;
+  font-weight: 600;
+  border-radius: 7px;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description{
+  font-size: 0.85em;
+}
+.delete-button{
+  padding: 2.5px 10px;
+  border: 2px solid rgba(255, 0, 0, 0.8);
+  background: rgba(255, 0, 0, 0.8);
+  color: white;
+  font-weight: 600;
+  border-radius: 7px;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description-small-font-size{
+  font-size: 0.75em;
+}
+.description-small-font-size-2{
+  font-size: 0.75em;
+}
+.visit-anchor{
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+.link-span{
+  background: #000;
+  color: white;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border-radius: 50%;
+}
+.back-arrow{
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  border-radius: 50%;
+}
+.all-projects-header-container{
+  display: flex;
+  gap: 20px;
+}
+.red{
+  color: red;
+  width: 100%;
+  text-align: center;
+}
+/* --------------------edit project css-------------------------- */
+.edit-container{
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit-inner-container{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.3);
+}
+.edit-inner-container h2{
+  margin-left: 20px;
+}
+.edit-inner-container form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.edit-form-div-1{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.select-user{
+  width: 24%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.2));
+}
+.title{
+  width: 75%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.2));
+}
+.edit-form-div-2{
+  width: 100%;
+  height: 100px;
+}
+.edit-form-div-3{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.text{
+  width: 100%;
+  height: 100px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  resize: none;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.2));
+}
+.text-input{
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.2));
+}
+.update-cancel-container{
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+.cancel{
+  width: 100px;
+}
+.submit-btn{
+  width: 150px;
+  padding: 2.5px 10px;
+  border: 2px solid lightgreen;
+  border-radius: 8px;
+  background: lightgreen;
+  color: black;
+  font-weight: 600;
+  border-radius: 7px;
+  font-size: 0.8em;
+}
+.name-input{
+  width: 49%;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.2));
+}
+.button-container{
+  display: flex;
+  gap: 30px;
+}
+/* ---------------user css------------------ */
+.user-inner-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.user-controller-btn{
+  display: flex;
+  gap: 30px;
+}
+.validations{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(145, 25, 25);
+  color: white;
+}
+.small{
+  font-size: 11px;
+  color: lightgreen;
+}
+.white-text{
+  color: #fff;
+}

@@ -1,0 +1,28 @@
+<h1>Recently Added Projects</h1>
+<div class="added-projects-container">
+  <% if (projects.length > 0) { %>
+    <a class="show-more-project-anchor" href="/projects/all">Show more</a>
+    <% projects.forEach(project => { %>
+      <div class="project-container">
+        <div class="project-inner-container">
+          <h3><%= project.title.toUpperCase() %></h3>
+          <% users.forEach(user => {%>
+            <% if (project.user == user.id) { %>
+              <p class="small"><strong class="white-text">Owner:</strong> <%= user.firstName %> <%= user.lastName %></p>
+            <% } %>
+          <% }) %>
+          <p class="description description-small-font-size-2"><% if ( project.description.length > 200) { %>
+            <%= project.description.substring(0, 200) + '...' %>
+          <% } else { %>
+            <%= project.description %>
+          <% } %></p>
+          <a class="visit-anchor" href="<%= project.link %>" target="_blank">
+            <span class="link-span"><ion-icon name="paper-plane-outline"></ion-icon></span>
+            Visit</a>
+        </div>
+      </div>
+    <% })  %>
+  <% } else { %>
+   <h3>No Project Available!</h3>
+  <% } %>
+</div>

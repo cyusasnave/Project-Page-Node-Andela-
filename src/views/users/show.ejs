@@ -1,0 +1,35 @@
+<h2><%= user.firstName %> <%= user.lastName %></h2>
+<br>
+<div class="button-container">
+  <a class="edit-button" href="/users">Cancel</a>
+  <a class="edit-button" href="/users/<%= user.id %>/edit">Edit</a>
+  <%- include("../partials/deleteForm.ejs", { url: `/users/${user.id}`}) %>
+</div>
+<div class="added-projects-container-1"></div>
+<% if (projectByUser.length > 0) { %>
+  <h1>Projects By User</h1>
+  <br>
+  <% projectByUser.forEach(project => { %>
+    <div class="project-container">
+      <div class="project-inner-container">
+        <h3><%= project.title.toUpperCase() %></h3>
+        <p class="description description-small-font-size"><% if ( project.description.length > 200) { %>
+          <%= project.description.substring(0, 150) + '...' %>
+        <% } else { %>
+          <%= project.description %>
+        <% } %></p>
+        <div class="project-edit-delete-button-container">
+          <a class="edit-button" href="/projects/<%= project.id %>/edit">Edit</a>
+          <a class="visit-anchor" href="<%= project.link %>" target="_blank">
+            <span class="link-span"><ion-icon name="paper-plane-outline"></ion-icon></span>
+            Visit</a>
+          <%- include("../partials/deleteForm.ejs", { url: `/projects/${project.id}`}) %>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+<% } else { %>
+  <h3>This User has no Project!</h3>
+ <% } %> 
+</div>
+

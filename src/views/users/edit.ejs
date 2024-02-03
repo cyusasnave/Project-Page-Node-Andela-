@@ -1,0 +1,14 @@
+
+<div class="edit-container">
+  <div class="edit-inner-container">
+    <h2>Edit user</h2>
+    <form action="/users/<%= user.id %>?_method=PUT" method="post">
+      <%- include("_form_fields.ejs") %>
+      <%- include("../partials/validations.ejs") %>
+      <div class="update-cancel-container">
+        <a class="edit-button cancel" href="/users">Cancel</a>
+        <button class="submit-btn" type="submit">Update</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="edit-form-div-1">
+  <select class="select-user" name="user">
+    <% users.forEach(user => {%>
+      <option label="<%= user.firstName %> <%= user.lastName %>" value="<%= user.id %>"></option>
+    <% })  %>
+  </select>
+  <input class="title" type="text" name="title" placeholder="Enter Project Tilte" value="<%= project.title %>">
+</div>
+<div class="edit-form-div-2">
+  <textarea class="text" name="description" placeholder="Describe briefly Your Project"><%= project.description %></textarea>
+</div>
+<div class="edit-form-div-3">
+  <input class="text-input" type="text" name="link" placeholder="Copy and paste your project link here" value="<%= project.link %>">
+</div>
